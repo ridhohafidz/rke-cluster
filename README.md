@@ -26,7 +26,9 @@ $ rke up
 To make kubectl work for your non-root user, run these commands, which are also part of the kubeadm init output.
 
 $ mkdir -p $HOME/.kube
+
 $ sudo cp -i /rke/admin.conf $HOME/.kube/config
+
 $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
