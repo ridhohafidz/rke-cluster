@@ -23,9 +23,9 @@
       shell: >
         usermod -aG docker rke
 
-    - name: be sure firewalld is disabled
-      systemd: name=firewalld enabled=no
+    #- name: be sure firewalld is disabled
+    #  systemd: name=firewalld enabled=no
 
-    - name: be sure firewalld is stopped
-      systemd: name=firewalld state=stopped
-      ignore_errors: yes
+    #- name: be sure firewalld is stopped
+     # systemd: name=firewalld state=stopped
+     # ignore_errors: yes
