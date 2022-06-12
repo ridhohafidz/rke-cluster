@@ -22,6 +22,14 @@ Please update file cluster.yml to adjust ip and server kubernetes that you have.
 
 $ rke up
 
+### 5. Running kubectl non-root
+To make kubectl work for your non-root user, run these commands, which are also part of the kubeadm init output.
+
+$ mkdir -p $HOME/.kube
+$ sudo cp -i /rke/admin.conf $HOME/.kube/config
+$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
 ## Install Rook Ceph
 
 Run all step below under directory rook/deploy/examples and make sure all pods running before running every the next step, "kubectl get po -n rook-ceph"
